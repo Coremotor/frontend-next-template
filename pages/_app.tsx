@@ -6,6 +6,7 @@ import Head from 'next/head'
 import light from 'app/styles/light'
 import dark from 'app/styles/dark'
 import { store } from 'app/store/store'
+import { ToastContainer } from 'react-toastify'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const themes: { [key: string]: DefaultTheme } = {
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <ThemeProvider theme={themes.light}>
+        <ToastContainer />
         <Head>
           <title>Next app</title>
         </Head>

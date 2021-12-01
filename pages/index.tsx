@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import { ToastContainer } from 'react-toastify'
 import { Layout } from 'app/components/Layout'
-import { config } from 'api/config'
+import { Content } from 'app/components/homePage/content'
 
 const Home: NextPage = () => {
   return (
     <>
       <Layout>
-        <div>{config.baseUrl}</div>
+        <Content />
       </Layout>
       <ToastContainer />
     </>
