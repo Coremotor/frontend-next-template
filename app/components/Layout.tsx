@@ -7,7 +7,7 @@ export const Layout: FC = ({ children }): JSX.Element => {
   return (
     <Container>
       <Header />
-      <main>{children}</main>
+      <Main>{children}</Main>
       <Footer />
     </Container>
   )
@@ -18,3 +18,5 @@ const Container = styled.div`
   padding: 0 20px;
   margin: 0 auto;
 `
+
+const Main = styled.main``

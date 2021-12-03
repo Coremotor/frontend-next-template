@@ -5,7 +5,7 @@ export const Footer = () => {
   return <Container>Footer</Container>
 }
 
-const Container = styled.header`
+const Container = styled.footer`
   border-top: 1px solid
     ${(props: DefaultThemeProps) => props.theme.text.primary};
   padding: 10px 0;
