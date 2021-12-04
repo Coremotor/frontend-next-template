@@ -11,7 +11,7 @@ import { FormEvent } from 'react'
 export const SignUp = () => {
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('sign in')
+    console.log('sign up')
   }
   return (
     <>

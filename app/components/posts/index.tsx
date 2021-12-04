@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 import { FC } from 'react'
 import { I_Post } from 'interfaices'
-import { Item } from 'app/components/item'
+import { Card } from 'app/components/card'
 
 type TProps = {
   posts: I_Post[]
 }
 
 export const Posts: FC<TProps> = ({ posts }) => {
-  console.log(posts)
   return (
     <Container>
-      {posts && posts.map((p) => <Item key={p.id} post={p} />)}
+      {posts && posts.map((post) => <Card key={post.id} post={post} />)}
     </Container>
   )
 }

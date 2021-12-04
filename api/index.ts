@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { config } from './config'
-import { toast } from 'react-toastify'
 
 export const request = axios.create({
   baseURL: config.baseUrl,
@@ -9,10 +8,10 @@ export const request = axios.create({
 
 request.interceptors.request.use(
   (config) => {
-  //   const token = localStorage.getItem('token')
-  //   if (token && config.headers) {
-  //     config.headers.authorization = `Bearer ${token}`
-  //   }
+    //   const token = localStorage.getItem('token')
+    //   if (token && config.headers) {
+    //     config.headers.authorization = `Bearer ${token}`
+    //   }
     return config
   },
   (error) => Promise.reject(error)
@@ -24,7 +23,7 @@ request.interceptors.response.use(
   },
   function (error) {
     console.log(error)
-    toast('Oops')
+    // toast('Oops')
     // if (
     //   error.response.data.error === 'Unauthorized' ||
     //   error.response.data.error === 'Access denied'

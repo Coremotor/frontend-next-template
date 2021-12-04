@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 import { FC } from 'react'
-import { I_Post } from 'interfaices'
-import { Item } from 'app/components/item'
+import { I_User } from 'interfaices'
+import { Card } from 'app/components/card'
 
 type TProps = {
-  posts: I_Post[]
+  users: I_User[]
 }
 
-export const Home: FC<TProps> = ({ posts }) => {
-  console.log(posts)
+export const Users: FC<TProps> = ({ users }) => {
   return (
     <Container>
-      {posts && posts.map((p) => <Item key={p.id} post={p} />)}
+      {users && users.map((user) => <Card key={user.id} user={user} />)}
     </Container>
   )
 }

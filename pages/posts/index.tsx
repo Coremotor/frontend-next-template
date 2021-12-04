@@ -1,5 +1,4 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import { ToastContainer } from 'react-toastify'
 import { Layout } from 'app/components/Layout'
 import Head from 'next/head'
 import { request } from 'api'
@@ -17,7 +16,6 @@ const PostsPage: NextPage = ({
       <Layout>
         <Posts posts={posts} />
       </Layout>
-      <ToastContainer />
     </>
   )
 }

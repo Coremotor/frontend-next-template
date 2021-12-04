@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <Container>
       <Image src={logo} alt="logo" height={64} width={128} />
-      <Link href={Routes.sign_in}>
+      <Link href={Routes.sign_in} passHref>
         <A>
           <Text>Sing in</Text>
           <StyledAiOutlineLogin />
