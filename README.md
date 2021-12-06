@@ -16,6 +16,7 @@ External libraries:
 - Internationalization framework [react-i18next](https://react.i18next.com/)
 - Notifications with [react-toastify](https://fkhadra.github.io/react-toastify/introduction/)
 - Icons with [@react-icons/all-files](https://react-icons.github.io/react-icons/)
+- SSR progress bar [nextjs-progressbar](https://www.npmjs.com/package/nextjs-progressbar)
 
 ## Install
 ```bash

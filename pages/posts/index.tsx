@@ -1,9 +1,9 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import { Layout } from 'app/components/Layout'
 import Head from 'next/head'
-import { request } from 'api'
+import { requestOnServer } from 'api'
 import { I_Post } from 'interfaices'
 import { Posts } from 'app/components/posts'
+import { Layout } from 'app/components/layout'
 
 const PostsPage: NextPage = ({
   posts,
@@ -23,16 +23,12 @@ const PostsPage: NextPage = ({
 export default PostsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await request.get('/posts')
+  const response = await requestOnServer.get('/posts')
   const posts: I_Post[] = response.data
   return {
     props: {
-      posts, // will be passed to the page component as props
+      posts,
     },
-
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 10, // In seconds
+    revalidate: 10,
   }
 }

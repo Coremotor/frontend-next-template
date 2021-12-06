@@ -1,9 +1,9 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import { Layout } from 'app/components/Layout'
-import { request } from 'api'
+import { requestOnServer } from 'api'
 import { I_User } from 'interfaices'
-import { Users } from 'app/users'
+import { Layout } from 'app/components/layout'
+import { Users } from 'app/components/users'
 
 const UsersPage: NextPage = ({
   users,
@@ -23,7 +23,7 @@ const UsersPage: NextPage = ({
 export default UsersPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await request.get('/users')
+  const response = await requestOnServer.get('/users')
   const users: I_User[] = response.data
   return {
     props: {
