@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Layout } from 'app/components/layout'
 import { requestOnServer } from 'api'
 import { I_User } from 'interfaices'
-import { User } from 'app/components/user'
+import { User } from 'app/_pages/user'
 
 const UserPage: NextPage = ({
   user,

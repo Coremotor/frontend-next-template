@@ -7,8 +7,8 @@ import {
 import Head from 'next/head'
 import { requestOnServer } from 'api'
 import { I_Post } from 'interfaices'
-import { Post } from 'app/components/post'
 import { Layout } from 'app/components/layout'
+import { Post } from 'app/_pages/post'
 
 const PostPage: NextPage = ({
   post,

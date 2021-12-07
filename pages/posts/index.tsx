@@ -2,8 +2,8 @@ import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 import { requestOnServer } from 'api'
 import { I_Post } from 'interfaices'
-import { Posts } from 'app/components/posts'
 import { Layout } from 'app/components/layout'
+import { Posts } from 'app/_pages/posts'
 
 const PostsPage: NextPage = ({
   posts,

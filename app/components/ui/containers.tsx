@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Grid_80vh = styled.div`
-  height: 80vh;
-  display: grid;
-  place-items: center;
+export const Main = styled.main`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 `

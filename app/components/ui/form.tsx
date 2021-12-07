@@ -8,3 +8,9 @@ export const Form = styled.form`
   border: 1px solid ${(props: DefaultThemeProps) => props.theme.text.primary};
   padding: 20px;
 `
+
+export const FormWrapper = styled.div`
+  display: grid;
+  place-items: center;
+  flex: 1 1 auto;
+`

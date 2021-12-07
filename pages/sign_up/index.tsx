@@ -1,5 +1,5 @@
+import { SignUp } from 'app/_pages/signUp'
 import { NextPage } from 'next'
-import { SignUp } from 'app/components/signUpPage'
 import Head from 'next/head'
 
 const SignUpPage: NextPage = () => {
