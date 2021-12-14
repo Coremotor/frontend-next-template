@@ -2,12 +2,12 @@ import axios from 'axios'
 import { config } from './config'
 import { toast } from 'react-toastify'
 
-export const requestOnServer = axios.create({
+export const serverRequest = axios.create({
   baseURL: config.baseUrl,
   responseType: 'json',
 })
 
-requestOnServer.interceptors.request.use(
+serverRequest.interceptors.request.use(
   (config) => {
     // config
     return config
@@ -15,7 +15,7 @@ requestOnServer.interceptors.request.use(
   (error) => Promise.reject(error)
 )
 
-requestOnServer.interceptors.response.use(
+serverRequest.interceptors.response.use(
   (response) => {
     return response
   },
@@ -25,12 +25,12 @@ requestOnServer.interceptors.response.use(
   }
 )
 
-export const requestOnClient = axios.create({
+export const clientRequest = axios.create({
   baseURL: config.baseUrl,
   responseType: 'json',
 })
 
-requestOnClient.interceptors.request.use(
+clientRequest.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token')
     if (token && config.headers) {
@@ -41,7 +41,7 @@ requestOnClient.interceptors.request.use(
   (error) => Promise.reject(error)
 )
 
-requestOnClient.interceptors.response.use(
+clientRequest.interceptors.response.use(
   (response) => {
     return response
   },

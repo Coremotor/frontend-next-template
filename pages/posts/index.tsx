@@ -1,6 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import { requestOnServer } from 'api'
+import { serverRequest } from 'api'
 import { I_Post } from 'interfaices'
 import { Layout } from 'app/components/layout'
 import { Posts } from 'app/_pages/posts'
@@ -23,7 +23,7 @@ const PostsPage: NextPage = ({
 export default PostsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await requestOnServer.get('/posts')
+  const response = await serverRequest.get('/posts')
   const posts: I_Post[] = response.data
   return {
     props: {

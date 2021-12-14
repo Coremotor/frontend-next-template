@@ -37,7 +37,7 @@ const A = styled.a`
   border: 1px solid ${(props: DefaultThemeProps) => props.theme.text.primary};
   cursor: pointer;
   padding: 10px;
-  & :hover {
+  &:hover {
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
   }
 `
